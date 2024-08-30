@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    font-family: "Blinker", sans-serif;
+    
+  }
+  
+  .navbar span {
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .navbar span::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    border-bottom: 1px solid #fff; /* Ubah warna garis bawah sesuai kebutuhan */
+    transition: right 0.3s; /* Animasi perubahan lebar garis bawah */
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  /* Efek garis bawah pada hover */
+  .navbar a:hover span::before {
+    right: 0; /* Merubah lebar garis bawah saat hover */
+  }
+  
+  .navbar {
+    background-color: #FF9874;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Menetapkan arah kolom pada tata letak flex */
+    align-items: center; /* Menengahkan item */
+  }
+  
+  .navbar h1 {
+    margin: 0;
+    color: #fff;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline-block; /* Menggunakan inline-block agar efek scaling dapat bekerja */
+    margin-right: 20px;
+    opacity: 0.7;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    position: relative;
+  }
+  
+  .navbar li:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  .navbar li::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar li:hover::before {
+    width: 100%;
+    left: 0;
+  }
+  
+  .content {
+    margin: 0 auto;
+    margin-left: 200px; /* tambahkan margin-left jika diperlukan */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  h2 {
+    color: #fff;
+  }
+  
+  .content {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .content {
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #home {
+      text-align: left; /* Mengubah text-align menjadi left */
+      padding: 50px 0;
+  }
+  
+  /* Media query for screens with width between 393px and 767px */
+  @media only screen and (min-width: 393px) and (max-width: 767px) {
+    body {
+      font-size: 14px; /* Adjust the base font size for better readability on smaller screens */
+    }
+  }
+  
+  .profile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .profile img {
+      width: 200px;
+      height: 200px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-left: 20px;
+      transition: transform 0.3s ease; 
+  }
+  
+  .profile img:hover {
+      transform: scale(1.1);
+  }
+  
+  .bio {
+      text-align: left;
+      padding: 0 20px;
+  }
+  
+  .bio h1,
+  .bio h2 {
+      color: #333;
+      font-size: 28px;
+      margin-bottom: 10px;
+  }
+  
+  .action-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Menghilangkan garis bawah default pada tautan */
+    display: inline-block; /* Membuat tombol memiliki lebar yang sesuai dengan kontennya */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan efek transisi dan bayangan saat dihover */
+  }
+  
+  .action-button:hover {
+    background-color: #45a049;
+    transform: scale(1.1); /* Membuat tombol sedikit membesar saat dihover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan saat dihover */
+  }
+  
+  
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #about {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10%; /* Optional: Untuk memberikan efek sudut bulat pada gambar */
+    margin-right: 20px; /* Jarak antara gambar dan teks */
+    transition: transform 0.3s ease; /* Menambahkan efek transisi */
+  
+  }
+  
+  img:hover {
+    transform: scale(1.1); /* Efek zoom saat dihover */
+  }
+  
+  
+  .text-content {
+    max-width: 60%; /* Atur lebar teks */
+    text-align: left; /* Atur teks menjadi rata kiri */
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    color: #555;
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  
+  
+  body {
+    margin: 0;
+    font-family: "Blinker", sans-serif;
+    padding: 0;
+  }
+  
+  
+  /* Existing styles */
+  /* ... */
+  
+  .skills-heading {
+    text-align: center;
+    color: #333;
+  }
+  
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+  }
+  
+  .skill {
+    width: calc(100% - 20px); /* Full width with some margin on the sides */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Change the direction to column */
+    align-items: center;
+  }
+  
+  .skill:hover .skill-level-inner {
+    width: 100%;
+  }
+  
+  /* Media query for smaller screens (max-width: 767px) */
+  @media only screen and (max-width: 767px) {
+    .skill {
+      width: calc(100% - 20px); /* Full width with some margin on the sides */
+      margin-right: 0; /* No margin on the right side */
+    }
+  }
+  
+  
+  
+  
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .gallery-section {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .gallery-item {
+    position: relative;
+    margin: 10px;
+    width: 500px; /* Atur lebar sesuai kebutuhan Anda */
+    height: 300px; /* Atur tinggi sesuai kebutuhan Anda */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Untuk menjaga aspek rasio gambar */
+    border-radius: 8px;
+  }
+  
+  .gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .gallery-item:hover .overlay {
+    opacity: 1;
+  }
+  
+  .gallery-item .overlay p {
+    margin: 0;
+    font-size: 16px;
+    color:#fff;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+  }
+  
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  
+  
+  #vidio {
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  
+  p {
+    color: #555;
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  form {
+    margin-top: 20px;
+    text-align: center; /* Untuk membuat form menjadi tengah */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  
+  button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+  }
+  
+  .social-media {
+    margin-top: 20px;
+  }
+  
+  .social-media a {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+     #myAudio {
+              display: none;
+          }
+  
+  
+  
+          body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+          }
+  
+        
+          
+          .footer {
+            background-color: #FF9874;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+          }
+          
+          .social-media {
+            margin-top: 20px;
+          }
+          
+          .social-media a {
+            display: inline-block;
+            margin-right: 15px;
+            transition: transform 0.3s ease;
+          }
+          
+          .social-media a:hover {
+            transform: scale(1.2);
+          }
+          
+  /* Media query for screens with width between 393px and 767px */
+  @media only screen and (min-width: 393px) and (max-width: 767px) {
+    body {
+      font-size: 14px; /* Adjust the base font size for better readability on smaller screens */
+    }
+  
+    .navbar {
+      padding: 10px;
+    }
+  
+    .navbar h1 {
+      font-size: 1.5em; /* Adjust the font size of the navbar heading */
+      margin-bottom: 10px;
+    }
+  
+    .navbar ul {
+      display: flex;
+      flex-direction: column; /* Stack navbar items vertically for better mobile layout */
+      align-items: center; /* Center-align navbar items */
+    }
+  
+    .navbar li {
+      margin: 10px 0; /* Add some space between navbar items */
+    }
+  
+    /* Adjust other styles as needed for a clean and responsive design */
+  }
